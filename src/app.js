@@ -20,6 +20,8 @@ app.use(express.json());
 app.use(express.static("public"));
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
+// Static files (like CSS, JS, images)
+app.use(express.static(path.join(__dirname, "public")));
 
 // Database connection
 connectDatabase();
